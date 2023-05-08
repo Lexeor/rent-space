@@ -1,29 +1,21 @@
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import React from "react";
 import "./popup.css";
+import { PopupContext } from "../contexts/PopupContext";
 
 function Popup(props) {
-  const [show, setShow] = useState(false);
-
-  const closeHandler = (e) => {
-    setShow(false);
-    props.togglePopup(false);
-  };
-
-  useEffect(() => {
-    setShow(props.show);
-  }, [props.show]);
+  const { showLoginPopup, toggleLoginPopup } = useContext(PopupContext);
 
   return (
     <div
       className="overlay"
       style={{
-        visibility: show ? "visible" : "hidden",
-        opacity: show ? "1" : "0",
+        visibility: showLoginPopup ? "visible" : "hidden",
+        opacity: showLoginPopup ? "1" : "0",
       }}
     >
       <div className="popup">
-        <i className="ri-close-line close" onClick={closeHandler}></i>
+        <i className="ri-close-line close" onClick={toggleLoginPopup}></i>
         <div className="popup-logo">
           <img
             src={window.location.origin + "/logo.png"}

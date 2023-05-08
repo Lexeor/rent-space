@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import TopMenu from "./TopMenu";
 import { Tooltip } from "react-tooltip";
+import { PopupContext } from "./contexts/PopupContext";
 
 function Header(props) {
+  const { toggleLoginPopup } = useContext(PopupContext);
+
   return (
     <header>
       <div className="container">
@@ -29,7 +32,7 @@ function Header(props) {
           </div>
           <div className="btn-area">
             <button className="btn-primary">+ Create ad</button>
-            <button className="btn-secondary" onClick={props.togglePopup}>
+            <button className="btn-secondary" onClick={toggleLoginPopup}>
               Login
             </button>
           </div>

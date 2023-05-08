@@ -1,0 +1,19 @@
+.overlay-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 300ms;
+  z-index: 50;
+}
+
+.top-menu-container {
+  background-color: var(--white-100);
+  padding-top: 70px;
+  min-height: 400px;
+  z-index: 80;
+}
