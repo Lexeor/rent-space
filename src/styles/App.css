@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+#root {
+  flex-grow: 1;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1376px;
+  margin: 0 auto 0 auto;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Menu */
+
+.menubar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.icons-area {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: var(--gray60-100);
+}
+
+.icons-area > i:hover {
+  color: var(--black-100);
+  cursor: pointer;
+}
+
+.menu-area {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-grow: 1;
+}
+
+header {
+  border-bottom: 1px solid;
+  border-color: var(--color-separator);
+  background-color: var(--white-100);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.logo {
+  width: 135px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.logo-big {
+  width: 235px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.menu-top {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.menu-item {
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+  border-top: 3px solid var(--white-0);
+  border-bottom: 3px solid;
+  border-color: var(--white-0);
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  border-bottom: 3px solid var(--black-20);
+}
+
+/* Buttons */
+
+.btn-primary,
+.btn-secondary {
+  border: 0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  color: var(--white-100);
+  background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: var(--color-primary);
+  background-color: var(--color-btn-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-btn-secondary-hover);
+  cursor: pointer;
+}
