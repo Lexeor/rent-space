@@ -67,6 +67,7 @@ body {
   flex-direction: row;
   gap: 15px;
   flex-grow: 1;
+  min-height: 67px;
 }
 
 header {
@@ -76,7 +77,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  min-height: 70px;
   z-index: 60;
 }
 
@@ -105,10 +105,16 @@ header {
   border-bottom: 3px solid;
   border-color: var(--white-0);
   font-weight: 500;
+  color: var(--black-100);
+  text-decoration: none;
 }
 
 .menu-item:hover {
   border-bottom: 3px solid var(--black-20);
+}
+
+.menu-item.active {
+  border-bottom: 3px solid var(--color-primary);
 }
 
 /* Buttons */
