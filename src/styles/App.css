@@ -10,6 +10,11 @@ body {
   height: 100vh;
 }
 
+h2 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
 #root {
   flex-grow: 1;
 }
@@ -19,18 +24,23 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-bg);
-  height: 100%;
+  min-height: 100%;
 }
 
 .container {
   width: 100%;
   max-width: 1376px;
   margin: 0 auto 0 auto;
+  padding: 0 10px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
+}
+
+.menu-icon {
+  display: none;
 }
 
 /* Top Menu */
@@ -145,4 +155,26 @@ header {
 .btn-secondary:hover {
   background-color: var(--color-btn-secondary-hover);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-area,
+  .icons-area,
+  .btn-area {
+    display: none;
+  }
+
+  .menubar {
+    justify-content: center;
+    position: relative;
+    padding: 15px 0;
+  }
+
+  .menu-icon {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    display: inline-block;
+    font-size: 1.5em;
+  }
 }

@@ -10,6 +10,9 @@ function Header(props) {
     <header>
       <div className="container">
         <div className="menubar">
+          <div className="menu-icon">
+            <i className="ri-menu-line"></i>
+          </div>
           <img
             src={window.location.origin + "/logo.png"}
             alt="Logo"

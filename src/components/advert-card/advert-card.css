@@ -1,0 +1,109 @@
+.adv-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adv-card {
+  background-color: var(--white-100);
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 500px;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 6px var(--black-20);
+  transition-property: scale;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  margin: 0.5rem 0.25em;
+}
+
+.adv-card:hover {
+  scale: 1.025;
+}
+
+.adv-card img {
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+}
+
+.adv-card-content {
+  position: relative;
+  padding: 10px 15px;
+}
+
+.add-card-updated {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7em;
+  color: var(--black-40);
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+.adv-card-price {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.adv-card button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  border: 0;
+  border-top: 1px solid;
+  border-color: var(--color-separator);
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+.adv-card button:hover {
+  cursor: pointer;
+  background-color: var(--color-btn-secondary-hover);
+}
+
+.adv-card button i {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.adv-card button span {
+  background-color: var(--black-20);
+  color: var(--white-100);
+  border-radius: 99px;
+  padding: 5px;
+  font-size: 0.8em;
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.adv-card button span.active {
+  background-color: var(--color-primary);
+}
+
+@media only screen and (min-width: 40em) {
+  .adv-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .adv-card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .adv-card {
+    flex: 0 1 calc(25% - 1em);
+  }
+}
