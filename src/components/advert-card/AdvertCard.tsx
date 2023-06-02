@@ -1,5 +1,4 @@
 import React from "react";
-import "./advert-card.css";
 
 type AdvertCardProps = {
   price: number;

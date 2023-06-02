@@ -1,6 +1,5 @@
 import React from "react";
 import { useContext } from "react";
-import "./menu-popup.css";
 import { PopupContext } from "../contexts/PopupContext";
 
 function MenuPopup(props) {

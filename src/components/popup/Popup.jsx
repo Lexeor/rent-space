@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import React from "react";
-import "./popup.css";
 import { PopupContext } from "../contexts/PopupContext";
 
 function Popup(props) {

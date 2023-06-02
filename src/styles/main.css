@@ -1,0 +1,390 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+}
+
+.adv-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.adv-card {
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  display: flex;
+  flex: 0 1 500px;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  transition-property: scale;
+  transition-duration: 0.25s;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+  margin: 0.5rem 0.25em;
+}
+
+.adv-card:hover {
+  scale: 1.025;
+}
+
+.adv-card img {
+  height: 200px;
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.adv-card-content {
+  position: relative;
+  padding: 10px 15px;
+}
+
+.add-card-updated {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7em;
+  color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+}
+
+.adv-card-price {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.adv-card button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  border: 0;
+  border-top: 1px solid;
+  border-color: #e8e9ec;
+  background-color: transparent;
+  color: #0468ff;
+}
+
+.adv-card button:hover {
+  cursor: pointer;
+  background-color: rgba(15, 72, 157, 0.2);
+}
+
+.adv-card button i {
+  font-size: 25px;
+  font-weight: 100;
+}
+
+.adv-card button span {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  border-radius: 99px;
+  padding: 5px;
+  font-size: 0.8em;
+  min-width: 25px;
+  min-height: 25px;
+}
+
+.adv-card button span.active {
+  background-color: #0468ff;
+}
+
+@media only screen and (min-width: 40em) {
+  .adv-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .adv-card {
+    flex: 0 1 calc(50% - 1em);
+  }
+}
+@media screen and (min-width: 60em) {
+  .adv-card {
+    flex: 0 1 calc(25% - 1em);
+  }
+}
+.overlay {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 300ms;
+  z-index: 100;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 40px;
+  background: #fff;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 300px;
+  max-width: 400px;
+  position: relative;
+  transition: all 5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: 200;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.popup .close:hover {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.popup-header h2 {
+  margin-bottom: 1em;
+  font-weight: 500;
+}
+
+.popup-logon-area input {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.popup-logon-area input:hover {
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  /* transition: all 0.5s ease-in-out; */
+}
+
+.popup-logon-area input:focus {
+  border-color: #0468ff;
+  outline: none;
+}
+
+.popup-logon-area {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overlay-menu {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  transition: opacity 300ms;
+  z-index: 50;
+}
+
+.top-menu-container {
+  background-color: #ffffff;
+  padding-top: 70px;
+  min-height: 400px;
+  z-index: 80;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-medium {
+  height: 40px;
+}
+
+h2 {
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+#root {
+  flex-grow: 1;
+}
+
+.App {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4;
+  min-height: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1376px;
+  margin: 0 auto 0 auto;
+  padding: 0 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* Top Menu */
+.menubar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.icons-area {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: #737a8e;
+}
+
+.icons-area > i:hover {
+  color: #000000;
+  cursor: pointer;
+}
+
+.menu-area {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  flex-grow: 1;
+  min-height: 67px;
+}
+
+header {
+  border-bottom: 1px solid;
+  border-color: #e8e9ec;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 60;
+}
+
+.logo {
+  width: 135px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.logo-big {
+  width: 235px;
+  height: 60px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.menu-top {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.menu-item {
+  padding: 20px 0 20px 0;
+  cursor: pointer;
+  border-top: 3px solid rgba(255, 255, 255, 0);
+  border-bottom: 3px solid;
+  border-color: rgba(255, 255, 255, 0);
+  font-weight: 500;
+  color: #000000;
+  text-decoration: none;
+}
+
+.menu-item:hover {
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+
+.menu-item.active {
+  border-bottom: 3px solid #0468ff;
+}
+
+/* Buttons */
+.btn-primary,
+.btn-secondary {
+  border: 0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  font-weight: 600;
+}
+
+.btn-primary {
+  color: #ffffff;
+  background-color: #0468ff;
+}
+
+.btn-primary:hover {
+  background-color: #0661ec;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  color: #0468ff;
+  background-color: rgba(4, 104, 255, 0.1);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(15, 72, 157, 0.2);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .menu-area,
+  .icons-area,
+  .btn-area {
+    display: none;
+  }
+  .menubar {
+    justify-content: center;
+    position: relative;
+    padding: 15px 0;
+  }
+  .menu-icon {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+    display: inline-block;
+    font-size: 1.5em;
+  }
+}/*# sourceMappingURL=main.css.map */

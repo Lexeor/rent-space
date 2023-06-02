@@ -35,11 +35,11 @@
   font-size: 24px;
   font-weight: 200;
   text-decoration: none;
-  color: var(--black-40);
+  color: $black-40;
 }
 .popup .close:hover {
   cursor: pointer;
-  color: var(--black-60);
+  color: $black-60;
 }
 
 .popup-header h2 {
@@ -51,14 +51,14 @@
   font-size: 16px;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--black-20);
+  border: 1px solid $black-20;
   border-radius: 5px;
   outline: none;
   transition: all 0.2s ease-in-out;
 }
 
 .popup-logon-area input:hover {
-  border: 1px solid var(--black-40);
+  border: 1px solid $black-40;
   /* transition: all 0.5s ease-in-out; */
 }
 

@@ -1,3 +1,5 @@
+@import "./variables";
+
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +10,20 @@
 body {
   display: flex;
   height: 100vh;
+}
+
+@import "../components/advert-card/advert-card";
+@import "../components/popup/popup";
+@import "../components/menu-popup/menu-popup";
+
+// Globals
+
+.w-100 {
+  width: 100%;
+}
+
+.h-medium {
+  height: 40px;
 }
 
 h2 {
@@ -23,7 +39,7 @@ h2 {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--color-bg);
+  background-color: $color-bg;
   min-height: 100%;
 }
 
@@ -64,11 +80,11 @@ h2 {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  color: var(--gray60-100);
+  color: $gray60-100;
 }
 
 .icons-area > i:hover {
-  color: var(--black-100);
+  color: $black-100;
   cursor: pointer;
 }
 
@@ -82,8 +98,8 @@ h2 {
 
 header {
   border-bottom: 1px solid;
-  border-color: var(--color-separator);
-  background-color: var(--white-100);
+  border-color: $color-separator;
+  background-color: $white-100;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -111,20 +127,20 @@ header {
 .menu-item {
   padding: 20px 0 20px 0;
   cursor: pointer;
-  border-top: 3px solid var(--white-0);
+  border-top: 3px solid $white-0;
   border-bottom: 3px solid;
-  border-color: var(--white-0);
+  border-color: $white-0;
   font-weight: 500;
-  color: var(--black-100);
+  color: $black-100;
   text-decoration: none;
 }
 
 .menu-item:hover {
-  border-bottom: 3px solid var(--black-20);
+  border-bottom: 3px solid $black-20;
 }
 
 .menu-item.active {
-  border-bottom: 3px solid var(--color-primary);
+  border-bottom: 3px solid $color-primary;
 }
 
 /* Buttons */
@@ -138,22 +154,22 @@ header {
 }
 
 .btn-primary {
-  color: var(--white-100);
-  background-color: var(--color-primary);
+  color: $white-100;
+  background-color: $color-primary;
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-hover);
+  background-color: $color-primary-hover;
   cursor: pointer;
 }
 
 .btn-secondary {
-  color: var(--color-primary);
-  background-color: var(--color-btn-secondary);
+  color: $color-primary;
+  background-color: $color-btn-secondary;
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-btn-secondary-hover);
+  background-color: $color-btn-secondary-hover;
   cursor: pointer;
 }
 
