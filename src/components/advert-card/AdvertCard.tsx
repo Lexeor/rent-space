@@ -6,7 +6,7 @@ type AdvertCardProps = {
   details: string;
   newChats: number;
   totalChats: number;
-  lastUpdated: Date;
+  lastUpdated: string;
 };
 
 function AdvertCard({
