@@ -3,9 +3,15 @@ import { PopupContext } from "./contexts/PopupContext";
 import { getMenuItems } from "../utils/fetchHelper";
 import { NavLink } from "react-router-dom";
 
-function TopMenu(props) {
-  const [menuItems, setMenuItems] = useState([]);
-  const { showTopMenu, hideTopMenu } = useContext(PopupContext);
+type MenuItem = {
+  id: number;
+  title: string;
+  path: string;
+};
+
+function TopMenu() {
+  const [menuItems, setMenuItems] = useState<MenuItem[] | null>([]);
+  const popupContext = useContext(PopupContext);
 
   useEffect(() => {
     (async () => {
@@ -17,13 +23,13 @@ function TopMenu(props) {
   function renderMenuItems() {
     return (
       <nav className="menu-top">
-        {menuItems.map((item) => {
+        {menuItems?.map((item) => {
           return (
             <NavLink
               key={item.id}
               className="menu-item"
-              onMouseEnter={() => showTopMenu(item.title)}
-              onClick={hideTopMenu}
+              onMouseEnter={() => popupContext!.showTopMenu(item.title)}
+              onClick={popupContext!.hideTopMenu}
               to={item.path}
             >
               {item.title}
