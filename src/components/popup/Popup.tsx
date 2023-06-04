@@ -1,20 +1,23 @@
-import { useContext } from "react";
 import React from "react";
+import { useContext } from "react";
 import { PopupContext } from "../contexts/PopupContext";
 
-function Popup(props) {
-  const { showLoginPopup, toggleLoginPopup } = useContext(PopupContext);
+function Popup() {
+  const popupContext = useContext(PopupContext);
 
   return (
     <div
       className="overlay"
       style={{
-        visibility: showLoginPopup ? "visible" : "hidden",
-        opacity: showLoginPopup ? "1" : "0",
+        visibility: popupContext!.showLoginPopup ? "visible" : "hidden",
+        opacity: popupContext!.showLoginPopup ? "1" : "0",
       }}
     >
       <div className="popup">
-        <i className="ri-close-line close" onClick={toggleLoginPopup}></i>
+        <i
+          className="ri-close-line close"
+          onClick={popupContext!.toggleLoginPopup}
+        ></i>
         <div className="popup-logo">
           <img
             src={window.location.origin + "/logo.png"}
