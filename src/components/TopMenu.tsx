@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { PopupContext } from "./contexts/PopupContext";
-import { getMenuItems } from "../utils/fetchHelper";
+import * as fetch from "../utils/fetch";
 import { NavLink } from "react-router-dom";
 
 type MenuItem = {
@@ -15,7 +15,7 @@ function TopMenu() {
 
   useEffect(() => {
     (async () => {
-      const menuItems = await getMenuItems(false);
+      const menuItems = await fetch.getMenuItems(false);
       setMenuItems(menuItems);
     })();
   }, []);

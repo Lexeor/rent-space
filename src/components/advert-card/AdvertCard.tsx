@@ -18,6 +18,7 @@ function AdvertCard({
   lastUpdated,
 }: AdvertCardProps) {
   const newChatsStyle = newChats > 0 ? "active" : "";
+
   return (
     <div className="adv-card">
       <img
